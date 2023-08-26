@@ -118,7 +118,7 @@ class _SplashState extends State<Splash> {
         splashIconSize: 100,
         duration: 2000,
         centered: true,
-        splash: 'img/liceo-logo.png',
+        splash: 'img/ICA.jpg',
         nextScreen: expired
             ? const SignIn()
             : loggedIn

@@ -82,13 +82,13 @@ class _Logo extends StatelessWidget {
           style: GoogleFonts.prompt(
             fontSize: 30,
             fontWeight: FontWeight.bold,
-            color: const Color.fromRGBO(141, 31, 31, 1),
+            color: const Color.fromRGBO(23, 0, 254, 1),
           ),
           children: [
             TextSpan(
               text: ' e',
               style: GoogleFonts.prompt(
-                color: const Color.fromRGBO(242, 167, 0, 1),
+                color: Colors.yellow[800],
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
@@ -96,7 +96,7 @@ class _Logo extends StatelessWidget {
             TextSpan(
               text: 'Book',
               style: GoogleFonts.prompt(
-                color: const Color.fromRGBO(242, 167, 0, 1),
+                color: Colors.yellow[800],
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
@@ -336,7 +336,7 @@ class __FormContentState extends State<_FormContent> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: isButtonEnabled
-                    ? const Color.fromRGBO(141, 31, 31, 1)
+                    ? const Color.fromRGBO(23, 0, 254, 1)
                     : Colors.grey,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4)),
