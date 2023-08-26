@@ -91,14 +91,14 @@ class _NavMainState extends State<NavMain> {
             title: Row(
               children: [
                 Image.asset(
-                  "img/liceo-logo.png",
+                  "img/ICA.jpg",
                   height: 48,
                   width: 48,
                 ),
                 !isWide
                     ? Expanded(
                         child: Text(
-                          "Liceo De Cagayan",
+                          "Immaculate Conception Academy",
                           style: GoogleFonts.prompt(
                             textStyle: const TextStyle(
                               color: Colors.white,
@@ -114,7 +114,7 @@ class _NavMainState extends State<NavMain> {
                     : Padding(
                         padding: const EdgeInsets.only(left: 10),
                         child: Text(
-                          "Liceo De Cagayan",
+                          "Immaculate Conception Academy",
                           style: GoogleFonts.prompt(
                             textStyle: TextStyle(
                               color: Colors.white,

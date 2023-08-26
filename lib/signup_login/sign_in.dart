@@ -117,7 +117,7 @@ class _Logo extends StatelessWidget {
         CircleAvatar(
           radius: isSmallScreen ? 60 : 90,
           backgroundColor: Colors.transparent,
-          child: Image.asset("img/liceo-logo.png"),
+          child: Image.asset("img/ICA.jpg"),
         ),
         Padding(
             padding: isSmallScreen
