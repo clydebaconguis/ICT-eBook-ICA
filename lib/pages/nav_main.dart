@@ -30,7 +30,7 @@ class _NavMainState extends State<NavMain> {
   @override
   void initState() {
     getUser();
-    changeStatusBarColor(const Color.fromRGBO(141, 31, 31, 1));
+    changeStatusBarColor(const Color.fromRGBO(23, 0, 254, 1));
     super.initState();
   }
 
@@ -79,8 +79,8 @@ class _NavMainState extends State<NavMain> {
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color.fromRGBO(141, 31, 31, 1),
-                    Color.fromRGBO(141, 31, 31, 1),
+                    Color.fromRGBO(23, 0, 254, 1),
+                    Color.fromRGBO(23, 0, 254, 1),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -92,9 +92,10 @@ class _NavMainState extends State<NavMain> {
               children: [
                 Image.asset(
                   "img/ICA.jpg",
-                  height: 48,
-                  width: 48,
+                  height: 40,
+                  width: 40,
                 ),
+                const SizedBox(width: 5.0),
                 !isWide
                     ? Expanded(
                         child: Text(

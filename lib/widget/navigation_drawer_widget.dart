@@ -9,6 +9,7 @@ import 'package:ebooks/provider/navigation_provider.dart';
 import 'package:ebooks/signup_login/sign_in.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 // import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -52,7 +53,8 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
   logout() async {
     SharedPreferences localStorage = await SharedPreferences.getInstance();
     await localStorage.clear();
-    // EasyLoading.dismiss();
+    EasyLoading.showToast('Logged out successfully!',
+        toastPosition: EasyLoadingToastPosition.bottom);
   }
 
   Future<void> showLogoutConfirmationDialog(BuildContext context) async {
@@ -131,8 +133,8 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color.fromRGBO(141, 31, 31, 1),
-                  Color.fromRGBO(141, 31, 31, 1),
+                  Color.fromRGBO(23, 0, 254, 1),
+                  Color.fromRGBO(23, 0, 254, 1),
                 ],
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
@@ -363,7 +365,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
               ? const Image(
                   width: 50,
                   height: 50,
-                  image: AssetImage("img/liceo-logo.png"),
+                  image: AssetImage("img/ICA.jpg"),
                 )
               : null,
         )
@@ -376,7 +378,7 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                 const Image(
                   width: 50,
                   height: 50,
-                  image: AssetImage("img/liceo-logo.png"),
+                  image: AssetImage("img/ICA.jpg"),
                 ),
               const SizedBox(width: 16),
               RichText(
