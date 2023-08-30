@@ -90,11 +90,10 @@ class _NavMainState extends State<NavMain> {
             // backgroundColor: const Color(0xff500a34),
             title: Row(
               children: [
-                CircleAvatar(
-                  child: Image.asset(
+                const CircleAvatar(
+                  radius: 20,
+                  backgroundImage: AssetImage(
                     "img/ICA.jpg",
-                    height: 40,
-                    width: 40,
                   ),
                 ),
                 const SizedBox(width: 5.0),
