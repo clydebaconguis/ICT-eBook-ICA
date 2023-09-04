@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:ebooks/app_util.dart';
 import 'package:ebooks/pages/nav_main.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -71,11 +72,11 @@ class _ProfilePageState extends State<ProfilePage> {
               ],
             ),
             flexibleSpace: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color.fromRGBO(23, 0, 254, 1),
-                    Color.fromRGBO(23, 0, 254, 1),
+                    AppUtil().schoolSecondary(),
+                    AppUtil().schoolSecondary(),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,

@@ -275,11 +275,11 @@ class _NavigationDrawerWidget2State extends State<NavigationDrawerWidget2> {
       width: isCollapsed ? MediaQuery.of(context).size.width * 0.2 : null,
       child: Drawer(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromRGBO(23, 0, 254, 1),
-                Color.fromRGBO(23, 0, 254, 1),
+                AppUtil().schoolSecondary(),
+                AppUtil().schoolSecondary(),
               ],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
@@ -843,8 +843,8 @@ class _NavigationDrawerWidget2State extends State<NavigationDrawerWidget2> {
 
   Widget buildHeader(bool isCollapsed) => isCollapsed
       ? Image.file(
-          height: 50,
-          width: 50,
+          height: 60,
+          width: 60,
           File(pathFile),
           errorBuilder:
               (BuildContext context, Object exception, StackTrace? stackTrace) {
@@ -856,20 +856,18 @@ class _NavigationDrawerWidget2State extends State<NavigationDrawerWidget2> {
       : Row(
           children: [
             const SizedBox(width: 24),
-            Expanded(
-              child: SizedBox(
+            SizedBox(
+              width: 50,
+              child: Image.file(
                 width: 50,
-                child: Image.file(
-                  width: 50,
-                  height: 50,
-                  File(pathFile),
-                  fit: BoxFit.fill,
-                  errorBuilder: (BuildContext context, Object exception,
-                      StackTrace? stackTrace) {
-                    // Return a fallback image or widget when an error occurs
-                    return const CircularProgressIndicator();
-                  },
-                ),
+                height: 50,
+                File(pathFile),
+                fit: BoxFit.fill,
+                errorBuilder: (BuildContext context, Object exception,
+                    StackTrace? stackTrace) {
+                  // Return a fallback image or widget when an error occurs
+                  return const CircularProgressIndicator();
+                },
               ),
             ),
             const SizedBox(width: 16),

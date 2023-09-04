@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dio/dio.dart';
+import 'package:ebooks/app_util.dart';
 import 'package:ebooks/models/pdf_tile.dart';
 import 'package:ebooks/pages/nav_pdf.dart';
 import 'package:ebooks/signup_login/sign_in.dart';
@@ -483,11 +484,11 @@ class _DetailBookPageState extends State<DetailBookPage> {
           appBar: AppBar(
             titleSpacing: 0,
             flexibleSpace: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color.fromRGBO(23, 0, 254, 1),
-                    Color.fromRGBO(23, 0, 254, 1),
+                    AppUtil().schoolSecondary(),
+                    AppUtil().schoolSecondary(),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,

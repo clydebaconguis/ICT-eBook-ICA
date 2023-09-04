@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:ebooks/api/my_api.dart';
+import 'package:ebooks/app_util.dart';
 import 'package:ebooks/models/pdf_tile.dart';
 import 'package:ebooks/provider/navigation_provider2.dart';
 import 'package:ebooks/signup_login/sign_in.dart';
@@ -135,11 +136,11 @@ class _NavPdfState extends State<NavPdf> {
         drawer: NavigationDrawerWidget2(updateData: updateData),
         appBar: AppBar(
           flexibleSpace: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color.fromRGBO(23, 0, 254, 1),
-                  Color.fromRGBO(23, 0, 254, 1),
+                  AppUtil().schoolSecondary(),
+                  AppUtil().schoolSecondary(),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,

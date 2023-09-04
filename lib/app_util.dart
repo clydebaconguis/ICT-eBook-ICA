@@ -1,8 +1,25 @@
 import 'dart:io';
+import 'package:flutter/material.dart';
 
 import 'package:path_provider/path_provider.dart';
 
 class AppUtil {
+  schoolPrimary() {
+    return const Color.fromRGBO(23, 0, 254, 1);
+  }
+
+  schoolSecondary() {
+    return Colors.grey[900];
+  }
+
+  schoolName() {
+    return "Immaculate Conception Academy";
+  }
+
+  schoolAddress() {
+    return "City of Batac Ilocos Norte";
+  }
+
   readBooks() async {
     var dir = await getApplicationSupportDirectory();
     final pathFile = Directory(dir.path);

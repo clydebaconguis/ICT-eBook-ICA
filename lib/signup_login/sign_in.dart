@@ -75,34 +75,56 @@ class _Logo extends StatelessWidget {
   const _Logo({Key? key}) : super(key: key);
 
   Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-          text: 'ICT',
+    return Column(
+      children: [
+        Text(
+          "${AppUtil().schoolName()}",
           style: GoogleFonts.prompt(
-            fontSize: 30,
+            fontSize: 25,
             fontWeight: FontWeight.bold,
-            color: const Color.fromRGBO(23, 0, 254, 1),
+            color: AppUtil().schoolSecondary(),
           ),
-          children: [
-            TextSpan(
-              text: ' e',
-              style: GoogleFonts.prompt(
-                color: Colors.yellow[800],
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            TextSpan(
-              text: 'Book',
-              style: GoogleFonts.prompt(
-                color: Colors.yellow[800],
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ]),
+          textAlign: TextAlign.center,
+        ),
+        Text(
+          "${AppUtil().schoolAddress()}",
+          style: GoogleFonts.prompt(
+            fontSize: 17,
+            color: AppUtil().schoolSecondary(),
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 10),
+      ],
     );
+    // return RichText(
+    //   textAlign: TextAlign.center,
+    //   text: TextSpan(
+    //       text: 'ICT',
+    //       style: GoogleFonts.prompt(
+    //         fontSize: 30,
+    //         fontWeight: FontWeight.bold,
+    //         color: const Color.fromRGBO(23, 0, 254, 1),
+    //       ),
+    //       children: [
+    //         TextSpan(
+    //           text: ' e',
+    //           style: GoogleFonts.prompt(
+    //             color: Colors.yellow[800],
+    //             fontSize: 30,
+    //             fontWeight: FontWeight.bold,
+    //           ),
+    //         ),
+    //         TextSpan(
+    //           text: 'Book',
+    //           style: GoogleFonts.prompt(
+    //             color: Colors.yellow[800],
+    //             fontSize: 30,
+    //             fontWeight: FontWeight.bold,
+    //           ),
+    //         ),
+    //       ]),
+    // );
   }
 
   @override
@@ -278,6 +300,7 @@ class __FormContentState extends State<_FormContent> {
               return null;
             },
             decoration: InputDecoration(
+              hintStyle: GoogleFonts.poppins(),
               labelStyle: GoogleFonts.poppins(),
               labelText: 'Username',
               hintText: 'Enter your email',
@@ -300,6 +323,7 @@ class __FormContentState extends State<_FormContent> {
             },
             obscureText: !_isPasswordVisible,
             decoration: InputDecoration(
+                hintStyle: GoogleFonts.poppins(),
                 labelStyle: GoogleFonts.poppins(),
                 labelText: 'Password',
                 hintText: 'Enter your password',
@@ -335,9 +359,8 @@ class __FormContentState extends State<_FormContent> {
             width: double.infinity,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: isButtonEnabled
-                    ? const Color.fromRGBO(23, 0, 254, 1)
-                    : Colors.grey,
+                backgroundColor:
+                    isButtonEnabled ? AppUtil().schoolPrimary() : Colors.grey,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4)),
               ),
@@ -361,8 +384,8 @@ class __FormContentState extends State<_FormContent> {
                 padding: const EdgeInsets.all(15.0),
                 child: Text(
                   'Sign in',
-                  style: GoogleFonts.prompt(
-                    fontSize: 16,
+                  style: GoogleFonts.poppins(
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

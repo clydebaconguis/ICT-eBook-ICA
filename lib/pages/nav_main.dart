@@ -1,3 +1,4 @@
+import 'package:ebooks/app_util.dart';
 import 'package:ebooks/pages/all_books.dart';
 import 'package:ebooks/provider/navigation_provider.dart';
 import 'package:ebooks/signup_login/sign_in.dart';
@@ -30,7 +31,7 @@ class _NavMainState extends State<NavMain> {
   @override
   void initState() {
     getUser();
-    changeStatusBarColor(const Color.fromRGBO(23, 0, 254, 1));
+    changeStatusBarColor(AppUtil().schoolSecondary());
     super.initState();
   }
 
@@ -69,18 +70,18 @@ class _NavMainState extends State<NavMain> {
         return Scaffold(
           drawer: const NavigationDrawerWidget(),
           appBar: AppBar(
-            toolbarHeight: constraints.maxWidth > 1000 ? 80 : null,
+            toolbarHeight: constraints.maxWidth > 1000 ? 80 : 70,
             elevation: 0,
             leadingWidth: constraints.maxWidth > 1000 ? 10 : null,
             leading:
                 constraints.maxWidth > 1000 ? const SizedBox.shrink() : null,
             titleSpacing: 0,
             flexibleSpace: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color.fromRGBO(23, 0, 254, 1),
-                    Color.fromRGBO(23, 0, 254, 1),
+                    AppUtil().schoolSecondary(),
+                    AppUtil().schoolSecondary(),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -100,7 +101,7 @@ class _NavMainState extends State<NavMain> {
                 !isWide
                     ? Expanded(
                         child: Text(
-                          "Immaculate Conception Academy",
+                          AppUtil().schoolName(),
                           style: GoogleFonts.prompt(
                             textStyle: const TextStyle(
                               color: Colors.white,
@@ -116,7 +117,7 @@ class _NavMainState extends State<NavMain> {
                     : Padding(
                         padding: const EdgeInsets.only(left: 10),
                         child: Text(
-                          "Immaculate Conception Academy",
+                          AppUtil().schoolName(),
                           style: GoogleFonts.prompt(
                             textStyle: TextStyle(
                               color: Colors.white,

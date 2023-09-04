@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:ebooks/app_util.dart';
 import 'package:ebooks/components/copyright.dart';
 import 'package:ebooks/data/drawer_items.dart';
 import 'package:ebooks/models/drawer_item.dart';
@@ -130,11 +131,11 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                         : null,
         child: Drawer(
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color.fromRGBO(23, 0, 254, 1),
-                  Color.fromRGBO(23, 0, 254, 1),
+                  AppUtil().schoolSecondary(),
+                  AppUtil().schoolSecondary(),
                 ],
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
